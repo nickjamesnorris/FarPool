@@ -1,5 +1,5 @@
 # Course Project
 
-This repository contains code for an interactive web app, created for the _Client-Side Web Development_ course at the UW iSchool.
+This repository contains code for an interactive web app, created for the _Client-Side Programming_ course at UWF.
 
-The site can be viewed at <https://info340-au18.github.io/project-yourusername/>
+The site can be viewed at <https://uwf-cop4864-sp2019.github.io/project-yourusername/>
