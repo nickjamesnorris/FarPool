@@ -1,0 +1,18 @@
+The United States has fallen behind other countries when it comes to public transportation.
+                While many countries, especially those in Europe, have reliable bus and train systems,
+                the United States is dependent on the private car. This is especially true for those living
+                in rural or suburban areas. Very few of these areas have any public transit. Thus, those
+                who cannot afford a car may be very limited in terms of job opportunity. Even in urban areas,
+                U.S. public transit can be slow and unreliable.
+
+                The benefits of public transit are hard to ignore. <a href="https://www.apta.com/news-publications/public-transportation-benefits/">It creates jobs, reduces carbon emissions, 
+                    and lowers gasoline use.</a> It can even <a href="https://www.nytimes.com/2015/05/07/upshot/transportation-emerges-as-crucial-to-escaping-poverty.html">help people escape poverty.</a>
+                    These are reasons why public transportation in the U.S. should be improved. We may be able to help do this
+                    by creating some apps.
+
+<ul>
+        <li><a href="https://www.vox.com/2015/8/10/9118199/public-transportation-subway-buses">The real reason American public transportation is such a disaster</a></li>
+        <li><a href="https://www.citylab.com/transportation/2018/10/while-america-suffocated-transit-other-countries-embraced-it/572167/">Why Public Transportation Works Better Outside the U.S.</li>
+        <li><a href="https://www.apta.com/news-publications/public-transportation-benefits/">Public Transportation Benefits</li>
+        <li><a href="https://www.nytimes.com/2015/05/07/upshot/transportation-emerges-as-crucial-to-escaping-poverty.html">Transportation Emerges as Crucial to Escaping Poverty</a></li>
+    </ul>
