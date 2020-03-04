@@ -1,0 +1,29 @@
+/* Set a background image by replacing the URL below */
+body {
+    background: url('../assets/landscape-background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+
+.navbar {
+    background-color: #62B200;
+}
+
+main {
+    position: relative;
+    top: 100px;
+}
+
+section {
+    background-color: white;
+}
+
+p {
+    font-size: 22px;
+}
+
+ h1.app-title {
+    text-align: center;
+}
