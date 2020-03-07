@@ -36,3 +36,7 @@ p {
 .navbar-nav.mr-auto li a {
     color: white;
 }
+
+#map {
+    height: 100%;
+  }
