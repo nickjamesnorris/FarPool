@@ -8,16 +8,22 @@
     <meta name="keywords" content="app, carpool, transportation, rural, suburban">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">
+
     <link rel="icon" href="favicon.png" type="image/x-icon">
 
     <title>FarPool</title>
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="app-title">About the project</h1>
+        </div>
+    </header>
+    
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
         <a class="navbar-brand">FarPool</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +33,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/index.html" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Home
                     </a>
@@ -44,60 +50,74 @@
                     <a class="nav-link" href="#">Create a carpool</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about.html">About</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Type a destination..." aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
     </nav>
 
     <main>
-        <section class="container-fluid">
-            <h1>WHY FARPOOL?</h1>
-            <p>
-                FarPool was created out of a desire to create better public transit in America.
-                The United States has fallen behind other countries when it comes to public transportation.
-                While many countries, especially those in Europe, have reliable bus and train systems,
-                the United States is dependent on the private car. This is especially true for those living
-                in rural or suburban areas. Very few of these areas have any public transit. Thus, those
-                who cannot afford a car may be very limited in terms of job opportunity. Even in urban areas,
-                U.S. public transit can be slow and unreliable.
-            </p>
-            <p>
-                The benefits of public transit are hard to ignore.
-                <a href="https://www.apta.com/news-publications/public-transportation-benefits/">It creates jobs,
-                    reduces carbon emissions, and lowers gasoline use.</a>
-                It can even <a
-                    href="https://www.nytimes.com/2015/05/07/upshot/transportation-emerges-as-crucial-to-escaping-poverty.html">help
-                    people escape poverty.</a>
-                These are reasons why public transportation in the U.S. should be improved. FarPool aims to make
-                life in the US better through reliable public transit.
-            </p>
+        <section class="container">
+            <div class='row'>
+                <div class='col-md-4'>
+                    <p>
+                        FarPool was created out of a desire to create better public transit in America. 
+                        The United States has fallen behind other countries when it comes to public 
+                        transportation. While many countries, especially those in Europe, have reliable 
+                        bus and train systems, the United States is dependent on the private car. 
+                        This is especially true for those living in rural or suburban areas. 
+                        Very few of these areas have any public transit. Thus, those who cannot afford 
+                        a car may be very limited in terms of job opportunity. Even in urban areas, 
+                        U.S. public transit can be slow and unreliable.
 
-            <h1>ABOUT THE CREATOR</h1>
-            <p>
-                Liam Hilton-Green is a junior at the University of West Florida studying Software
-                Design &amp Development. This website is a project for his Client-Side Programming class.
-                He was inspired to make FarPool after seeing firsthand how difficult it can be to
-                get a job when a person lives in a rural area without a car.
-            </p>
+                        The benefits of public transit are hard to ignore. It creates jobs, 
+                        reduces carbon emissions, and lowers gasoline use. It can even help people 
+                        escape poverty. These are reasons why public transportation in the U.S. 
+                        should be improved. FarPool aims to make life in the US better through 
+                        reliable public transit.
+                    </p>                    
+                </div>
+            </div>
+            
 
-            <h1>IMAGES USED</h1>
-            <p>Website Icon: Car by ICONZ from the Noun Project</p>
-            <p><a
-                    href="https://pxhere.com/en/photo/114961">https://pxhere.com/en/photo/114961</a>
-            </p>
-            <p><a href="https://pxhere.com/en/photo/1438547">https://pxhere.com/en/photo/1438547</a></p>
-            <p><a href="https://pxhere.com/en/photo/464609">https://pxhere.com/en/photo/464609</a></p>
-            <p><a href="https://pxhere.com/en/photo/1568857">https://pxhere.com/en/photo/1568857</a></p>
+            <h2>ABOUT THE CREATOR</h2>
+            <div class='row'>
+                <div class='col-md-4'>
+                    <p>
+                        Liam Hilton-Green is a junior at the University of West Florida studying 
+                        Software Design & Development. This website is a project for his 
+                        Client-Side Programming class. He was inspired to make FarPool after seeing 
+                        firsthand how difficult it can be to get a job when a person lives in a 
+                        rural area without a car.
+                    </p>                    
+                </div>
+            </div>
+
+            <h2>IMAGES USED</h2>
+            <div class='row'>
+                <div class='col-md-4'>
+                    <p>
+                        Website Icon: Car by ICONZ from the Noun Project
+
+                        <a href='https://pxhere.com/en/photo/114961'>https://pxhere.com/en/photo/114961</a>
+
+                        <a href='https://pxhere.com/en/photo/1438547'>https://pxhere.com/en/photo/1438547</a>
+
+                        <a href='https://pxhere.com/en/photo/464609'>https://pxhere.com/en/photo/464609</a>
+
+                        <a href='https://pxhere.com/en/photo/1568857'>https://pxhere.com/en/photo/1568857</a>
+                    </p>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div>© 2020</div>
+    <footer class='row'>
+        <div class='container'>© 2020</div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

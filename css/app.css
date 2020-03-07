@@ -7,7 +7,7 @@ body {
     -o-background-size: cover;
   }
 
-.navbar {
+.navbar, .dropdown-menu {
     background-color: #62B200;
 }
 
@@ -24,6 +24,15 @@ p {
     font-size: 22px;
 }
 
+.jumbotron {
+    background-color: white;
+}
+
  h1.app-title {
     text-align: center;
+    margin-top: 1.25em;
+}
+
+.navbar-nav.mr-auto li a {
+    color: white;
 }
