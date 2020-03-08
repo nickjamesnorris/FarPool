@@ -5,10 +5,20 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    font-family: 'Roboto', 'Lato', 'Sen';
   }
 
-.navbar, .dropdown-menu {
-    background-color: #62B200;
+h1.app-title {
+    text-align: center;
+    margin-top: 1.25em;
+}
+
+.img-fluid {
+    box-shadow: 0px 0px 10px 2px grey;
+}
+
+.jumbotron {
+    background-color: white;
 }
 
 main {
@@ -16,28 +26,23 @@ main {
     top: 100px;
 }
 
-section {
-    background-color: white;
+#map {
+    height: 100%;
+    margin-top: 7em;
 }
 
-p {
-    font-size: 22px;
-}
-
-.jumbotron {
-    background-color: white;
-}
-
- h1.app-title {
-    text-align: center;
-    margin-top: 1.25em;
+.navbar, .dropdown-menu {
+    background-color: #62B200;
 }
 
 .navbar-nav.mr-auto li a {
     color: white;
 }
 
-#map {
-    height: 100%;
-    margin-top: 7em;
-  }
+p {
+    font-size: 22px;
+}
+
+section {
+    background-color: white;
+}

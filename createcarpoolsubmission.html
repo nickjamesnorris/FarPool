@@ -1,8 +1,7 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang='en'>
-  <head>
-    <title>FarPool</title>
+<head>
     <meta charset="utf-8">
     <meta name="author" content="Liam Hilton-Green">
     <meta name="description" content="Homepage for FarPool, the carpool app">
@@ -14,28 +13,16 @@
 
     <link rel="icon" href="favicon.png" type="image/x-icon">
 
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
+    <title>FarPool</title>
+</head>
 
-  <body>
+<body>
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="app-title">Find a carpool</h1>
+          <h1 class="app-title">Form submitted</h1>
         </div>
     </header>
-
+    
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
         <a class="navbar-brand">FarPool</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -74,42 +61,30 @@
     </nav>
 
     <main>
-        <section class='container'>
+        <section class="container">
             <div class='row'>
-                <div class='col-md-8'>
-                    <h2>Where do you want to go?</h2>
-                    <form action="carpools.html" method="post">
-                        <div class="form-group" id="zipCodeForm">
-                          <label for="Entering zip code">Enter zip code</label>
-                          <input type="text" class="form-control" id="locationZipCode" aria-describedby="locationZipCode">
-                          <small id="zipCodeInfo" class="form-text text-muted">We'll show you the carpools available for your destination.</small>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+                <div class='col-md-4'>
+                    <p>
+                        Your carpool info has been submitted! Our service is coming soon.
+                    </p>                    
                 </div>
             </div>
         </section>
     </main>
-    
-    <div id="map" role="application"></div>
 
     <footer class='row'>
         <div class='col-md-4'>© 2020</div>
     </footer>
-  
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_TJFzSX3g0JY75_u4lF-JSEcThedb2k0&callback=initMap"
-        async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src='css\js\map.js'></script>
-    <script src='css\js\carpoolSearch.js'></script>
 </body>
 
 </html>
