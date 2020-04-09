@@ -37,15 +37,20 @@ export class MapComponent implements OnInit {
         label: {
           color: "white",
           border: "black",
-          text: "Marker Label"
+          text: "Your Location"
         },
         title: "Marker Title",
-        info: "Marker info",
+        info: "Address maybe?",
         options: {
           animation: google.maps.Animation.DROP
         }
       });
     });
+  }
+
+  openInfo(marker: MapMarker, info) {
+    this.infoContent = info;
+    this.info.open(marker);
   }
   
 }
