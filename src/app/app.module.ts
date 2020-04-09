@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MapComponent } from './map/map.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MapComponent } from './map/map.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
