@@ -7,13 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MapComponent } from './map/map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { AboutComponent } from './about/about.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     MapComponent,
-    AboutComponent
+    AboutComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
