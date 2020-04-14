@@ -8,6 +8,8 @@ import { MapComponent } from './map/map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { AboutComponent } from './about/about.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CreateACarpoolComponent } from './create-a-carpool/create-a-carpool.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { HomepageComponent } from './homepage/homepage.component';
     NavbarComponent,
     MapComponent,
     AboutComponent,
-    HomepageComponent
+    HomepageComponent,
+    CreateACarpoolComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
