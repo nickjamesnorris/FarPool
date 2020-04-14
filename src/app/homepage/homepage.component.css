@@ -1,0 +1,21 @@
+h1.app-title {
+    text-align: center;
+    margin-top: 1.25em;
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+main {
+    position: relative;
+    top: 100px;
+}
+
+p {
+    font-size: 22px;
+}
+
+section {
+    background-color: white;
+}
