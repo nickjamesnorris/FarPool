@@ -4,53 +4,24 @@ import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 @Component({
   selector: "app-map",
   templateUrl: "./map.component.html",
-  styleUrls: ["./map.component.css"]
+  styleUrls: ["./map.component.css"],
 })
-
 export class MapComponent implements OnInit {
-  
-  @ViewChild(GoogleMap, { static: false }) map: GoogleMap;
-  @ViewChild(MapInfoWindow, { static: false }) info: MapInfoWindow;
-
-  zoom = 18;
-  center: google.maps.LatLngLiteral;
-  options: google.maps.MapOptions = {
-    zoomControl: true,
-    scrollwheel: false,
-    disableDoubleClickZoom: true,
-    mapTypeId: "hybrid"
-  };
-  markers = [];
-  infoContent = "";
+  latitude: number;
+  longitude: number;
+  zoom: number;
 
   ngOnInit() {
-    navigator.geolocation.getCurrentPosition(x => {
-      this.center = {
-        lat: x.coords.latitude,
-        lng: x.coords.longitude
-      };
-      this.markers.push({
-        position: {
-          lat: x.coords.latitude,
-          lng: x.coords.longitude
-        },
-        label: {
-          color: "white",
-          border: "black",
-          text: "Your Location"
-        },
-        title: "Marker Title",
-        info: "Address maybe?",
-        options: {
-          animation: google.maps.Animation.DROP
-        }
-      });
-    });
+    this.setCurrentLocation();
   }
 
-  openInfo(marker: MapMarker, info) {
-    this.infoContent = info;
-    this.info.open(marker);
+  private setCurrentLocation() {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.latitude = position.coords.latitude;
+        this.longitude = position.coords.longitude;
+        this.zoom = 15;
+      });
+    }
   }
-  
 }
