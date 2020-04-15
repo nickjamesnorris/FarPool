@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FlashMessagesService } from 'angular2-flash-messages';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-a-carpool',
@@ -11,8 +13,8 @@ export class CreateACarpoolComponent implements OnInit {
 
   public carpoolForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
-    this.createForm()
+  constructor(private fb: FormBuilder, private flashMessagesService: FlashMessagesService, private router: Router) {
+    this.createForm();
    }
 
   ngOnInit(): void {
@@ -32,7 +34,10 @@ export class CreateACarpoolComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('submitted')
+    this.router.navigate(['createcarpool']);
+    this.flashMessagesService.show("Carpool submitted successfully!", { cssClass: 'alert-success', timeout: 4000 });
+    this.carpoolForm.reset();
+    window.scroll(0, 0);
   }
 
 }
