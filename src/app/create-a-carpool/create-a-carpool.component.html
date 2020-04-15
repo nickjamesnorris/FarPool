@@ -1,46 +1,53 @@
 <form [formGroup]="carpoolForm" (ngSubmit)="onSubmit()">
-  <h2>Create a carpool here</h2>
+  <h2 class="title">Create A Carpool</h2>
   <div class="form-group">
-    <label
-      >Carpool name:
-      <input
-        type="text"
-        [formControlName]="carpoolName"
-        aria-describedby="carpool name"
-      />
-    </label>
+    <label>Carpool name:</label>
+    <input
+      class="form-control"
+      id="carpoolName"
+      type="carpoolName"
+      name="carpoolName"
+      formControlName="carpoolName"
+      aria-describedby="carpool name"
+    />
   </div>
 
   <div class="form-group">
-    <label for="Entering host name"
-      >Host name
-      <input
-        type="text"
-        class="form-control"
-        id="hostName"
-        aria-describedby="host name"
-      />
-      <small class="form-text text-muted">Who is organizing the carpool?</small>
-    </label>
+    <label for="Entering host name">Host name</label>
+    <input
+      class="form-control"
+      id="hostName"
+      type="hostName"
+      name="hostName"
+      formControlName="hostName"
+      aria-describedby="host name"
+    />
+    <small class="form-text text-muted">Who is organizing the carpool?</small>
   </div>
+
   <div class="form-group">
     <label for="Entering starting point">Starting point</label>
     <input
-      type="text"
       class="form-control"
       id="startingPoint"
+      type="startingPoint"
+      name="startingPoint"
+      formControlName="startingPoint"
       aria-describedby="starting point"
     />
   </div>
   <div class="form-group">
     <label for="Entering destination">Destination</label>
     <input
-      type="text"
       class="form-control"
       id="destination"
+      type="destination"
+      name="destination"
+      formControlName="destination"
       aria-describedby="destination"
     />
   </div>
+
   <div class="form-group form-check">
     <label for="Entering destination">Scheduled days</label>
     <small class="form-text text-muted">When will the carpool be active?</small>
@@ -146,10 +153,12 @@
   <div class="form-group-inline">
     <label for="Entering type of car">Type of car</label>
     <input
-      type="text"
       class="form-control"
       id="make"
+      type="typeOfCar"
+      name="typeOfCar"
       aria-describedby="make"
+      formControlName="typeOfCar"
       placeholder="Make"
     />
     <input
@@ -167,5 +176,5 @@
       placeholder="Year"
     />
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" id="button">Submit</button>
 </form>
