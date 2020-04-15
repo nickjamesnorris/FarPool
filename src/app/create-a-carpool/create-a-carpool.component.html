@@ -1,1 +1,171 @@
-<p>create-a-carpool works!</p>
+<form [formGroup]="carpoolForm" (ngSubmit)="onSubmit()">
+  <h2>Create a carpool here</h2>
+  <div class="form-group">
+    <label
+      >Carpool name:
+      <input
+        type="text"
+        [formControlName]="carpoolName"
+        aria-describedby="carpool name"
+      />
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label for="Entering host name"
+      >Host name
+      <input
+        type="text"
+        class="form-control"
+        id="hostName"
+        aria-describedby="host name"
+      />
+      <small class="form-text text-muted">Who is organizing the carpool?</small>
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="Entering starting point">Starting point</label>
+    <input
+      type="text"
+      class="form-control"
+      id="startingPoint"
+      aria-describedby="starting point"
+    />
+  </div>
+  <div class="form-group">
+    <label for="Entering destination">Destination</label>
+    <input
+      type="text"
+      class="form-control"
+      id="destination"
+      aria-describedby="destination"
+    />
+  </div>
+  <div class="form-group form-check">
+    <label for="Entering destination">Scheduled days</label>
+    <small class="form-text text-muted">When will the carpool be active?</small>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="sunday" />
+      <label class="custom-control-label" for="sunday">Sunday</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="monday" />
+      <label class="custom-control-label" for="monday">Monday</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="tuesday" />
+      <label class="custom-control-label" for="tuesday">Tuesday</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="wednesday" />
+      <label class="custom-control-label" for="wednesday">Wednesday</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="thursday" />
+      <label class="custom-control-label" for="thursday">Thursday</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="friday" />
+      <label class="custom-control-label" for="friday">Friday</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="saturday" />
+      <label class="custom-control-label" for="saturday">Saturday</label>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Time to leave">Time to leave</label>
+    <select id="timeToLeaveHour" class="form-control-inline">
+      <option selected>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+    </select>
+    <select id="timeToLeaveMinute" class="form-control-inline">
+      <option selected>00</option>
+      <option>05</option>
+      <option>10</option>
+      <option>15</option>
+      <option>20</option>
+      <option>25</option>
+      <option>30</option>
+      <option>35</option>
+      <option>40</option>
+      <option>45</option>
+      <option>50</option>
+      <option>55</option>
+    </select>
+    <select id="timeToLeaveAMPM" class="form-control-inline">
+      <option selected>AM</option>
+      <option>PM</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="Time to arrive home">Time to arrive home</label>
+    <select id="timeToArriveHomeHour" class="form-control-inline">
+      <option selected>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+    </select>
+    <select id="timeToArriveHomeMinute" class="form-control-inline">
+      <option selected>00</option>
+      <option>05</option>
+      <option>10</option>
+      <option>15</option>
+      <option>20</option>
+      <option>25</option>
+      <option>30</option>
+      <option>35</option>
+      <option>40</option>
+      <option>45</option>
+      <option>50</option>
+      <option>55</option>
+    </select>
+    <select id="timeToArriveHomeAMPM" class="form-control-inline">
+      <option selected>AM</option>
+      <option>PM</option>
+    </select>
+  </div>
+  <div class="form-group-inline">
+    <label for="Entering type of car">Type of car</label>
+    <input
+      type="text"
+      class="form-control"
+      id="make"
+      aria-describedby="make"
+      placeholder="Make"
+    />
+    <input
+      type="text"
+      class="form-control"
+      id="model"
+      aria-describedby="model"
+      placeholder="Model"
+    />
+    <input
+      type="text"
+      class="form-control"
+      id="year"
+      aria-describedby="year"
+      placeholder="Year"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
