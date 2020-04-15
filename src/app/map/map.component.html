@@ -1,15 +1,10 @@
-<div id="map"><google-map height="500px" width="100%" [zoom]="zoom" [center]="center"
-[options]="options" >
+<div class="container">
+  <div class="form-group">
+    <label>Enter address</label>
+    <input id="search" type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text">
+  </div>
   
-  <map-marker #markerElem *ngFor="let marker of markers" 
-  [position]="marker.position" [label]="marker.label"
-  [title]="marker.title" [options]="marker.options" 
-  (mapClick)="openInfo(markerElem, marker.info)" >
-  
-  </map-marker>
-
-  <map-info-window >
-    {{infoContent}}
-</map-info-window>
-
-</google-map></div>
+  <agm-map id='map' [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+  </agm-map>
+</div>

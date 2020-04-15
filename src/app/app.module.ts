@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CreateACarpoolComponent } from './create-a-carpool/create-a-carpool.component';
+import { AgmCoreModule } from "@agm/core";
 
 @NgModule({
   declarations: [
@@ -24,9 +25,13 @@ import { CreateACarpoolComponent } from './create-a-carpool/create-a-carpool.com
     BrowserModule,
     AppRoutingModule,
     GoogleMapsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyD_TJFzSX3g0JY75_u4lF-JSEcThedb2k0",
+      libraries: ["places"]
+    })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
