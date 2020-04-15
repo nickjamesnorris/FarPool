@@ -13,29 +13,3 @@ body {
     -o-background-size: cover;
     font-family: 'Roboto', 'Lato', 'Sen';
   }
-
-  h1.app-title {
-    text-align: center;
-    margin-top: 1.25em;
-}
-
-.img-fluid {
-    box-shadow: 0px 0px 10px 2px grey;
-}
-
-.jumbotron {
-    background-color: white;
-}
-
-main {
-    position: relative;
-    top: 100px;
-}
-
-p {
-  font-size: 22px;
-}
-
-section {
-  background-color: white;
-}
