@@ -6,6 +6,7 @@
 
 <main>
   <section class="container">
+    <flash-messages></flash-messages>
     <form [formGroup]="carpoolForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label>Carpool name</label>
@@ -169,18 +170,22 @@
           placeholder="Make"
         />
         <input
-          type="text"
-          class="form-control"
-          id="model"
-          aria-describedby="model"
-          placeholder="Model"
+        class="form-control"
+        id="model"
+        type="typeOfCar"
+        name="typeOfCar"
+        aria-describedby="model"
+        formControlName="typeOfCar"
+        placeholder="Model"
         />
         <input
-          type="text"
-          class="form-control"
-          id="year"
-          aria-describedby="year"
-          placeholder="Year"
+        class="form-control"
+        id="year"
+        type="typeOfCar"
+        name="typeOfCar"
+        aria-describedby="year"
+        formControlName="typeOfCar"
+        placeholder="Year"
         />
       </div>
       <button type="submit" class="btn btn-primary" id="button">Submit</button>

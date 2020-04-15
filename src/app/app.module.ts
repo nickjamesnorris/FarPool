@@ -11,6 +11,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CreateACarpoolComponent } from './create-a-carpool/create-a-carpool.component';
 import { AgmCoreModule } from "@agm/core";
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AgmCoreModule } from "@agm/core";
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyD_TJFzSX3g0JY75_u4lF-JSEcThedb2k0",
       libraries: ["places"]
-    })
+    }),
+    FlashMessagesModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
