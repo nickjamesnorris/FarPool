@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild, ElementRef, NgZone } from "@angular/core";
-import { GoogleMap, MapInfoWindow, MapMarker } from "@angular/google-maps";
 import { MapsAPILoader } from '@agm/core';
 import {} from 'googlemaps';
 
@@ -27,6 +26,8 @@ export class MapComponent implements OnInit {
     this.mapsAPILoader.load().then(() => {
       this.setCurrentLocation();
       this.geoCoder = new google.maps.Geocoder;
+
+      console.log(google.maps);
  
       let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
         types: ["address"]

@@ -28,7 +28,7 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
     GoogleMapsModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyD_TJFzSX3g0JY75_u4lF-JSEcThedb2k0",
+      apiKey: "AIzaSyAqf_U-eCtA71Dc3TBPRCpfJ2Q1Lf4FgD4",
       libraries: ["places"]
     }),
     FlashMessagesModule.forRoot()
