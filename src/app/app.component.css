@@ -1,15 +1,16 @@
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/OpensSans-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+  src: url("/assets/fonts/OpensSans-Bold.ttf") format("truetype"); /* Safari, Android, iOS */
 }
 
 body {
-    background: url('../assets/landscape-background.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    font-family: 'Roboto', 'Lato', 'Sen';
-  }
+  background: url("../assets/landscape-background.jpg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  font-family: "Roboto", "Lato", "Sen";
+}
