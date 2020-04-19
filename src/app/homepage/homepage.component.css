@@ -3,8 +3,16 @@ h1.app-title {
     margin-top: 1.25em;
 }
 
+@media screen and (max-width: 565px) {
+    h1.app-title {
+        text-align: center;
+        margin-top: 2em;
+    }
+}
+
 .jumbotron {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    height: 200px;
 }
 
 main {
@@ -17,5 +25,5 @@ p {
 }
 
 section {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
 }

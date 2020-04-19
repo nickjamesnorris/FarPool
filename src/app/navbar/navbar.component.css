@@ -2,6 +2,18 @@
     background-color: #62B200;
 }
 
+.fixed-top {
+    padding-top: 0;
+}
+
 .navbar-nav.mr-auto li a {
     color: white;
+}
+
+#img {
+    height: 70px;
+}
+
+.navbar-brand {
+    height: 65px;
 }

@@ -2,3 +2,9 @@
     align-content: center;
     height: 500px;
 }
+
+.size {
+    margin-top: -100px;
+    padding-bottom: 110px;
+    align-content: center;
+}
