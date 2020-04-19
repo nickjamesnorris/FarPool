@@ -8,6 +8,7 @@ section {
 
 .jumbotron {
     background-color: white;
+    height: 200px;
 }
 
 main {
@@ -22,4 +23,8 @@ p {
 h1.app-title {
     text-align: center;
     margin-top: 1.25em;
+}
+
+.size {
+    margin-bottom: 40px;
 }
