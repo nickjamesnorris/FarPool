@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "farpool-e6d79"
+  },
+  "targets": {
+    "farpool-e6d79": {
+      "hosting": {
+        "farpool": [
+          "farpool-e6d79"
+        ]
+      }
+    }
   }
 }
