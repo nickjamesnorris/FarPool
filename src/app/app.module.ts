@@ -13,6 +13,12 @@ import { CreateACarpoolComponent } from './create-a-carpool/create-a-carpool.com
 import { AgmCoreModule } from "@agm/core";
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+//import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from 'src/environments/environment';
+//import { AuthGuard } from './services/auth-guard.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +37,9 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
       apiKey: "AIzaSyAqf_U-eCtA71Dc3TBPRCpfJ2Q1Lf4FgD4",
       libraries: ["places"]
     }),
-    FlashMessagesModule.forRoot()
+    FlashMessagesModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent],
