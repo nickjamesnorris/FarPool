@@ -1,7 +1,19 @@
 .navbar, .dropdown-menu {
-    background-color: #62B200;
+    background-color: rgba(13, 125, 218, 0.74);
+}
+
+.fixed-top {
+    padding-top: 0;
 }
 
 .navbar-nav.mr-auto li a {
     color: white;
+}
+
+#img {
+    height: 70px;
+}
+
+.navbar-brand {
+    height: 65px;
 }

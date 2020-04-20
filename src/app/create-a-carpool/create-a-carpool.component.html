@@ -1,6 +1,6 @@
 <header class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="app-title">Create a carpool</h1>
+    <h1 class="app-title">Create a Carpool</h1>
   </div>
 </header>
 
@@ -56,9 +56,9 @@
         />
       </div>
 
-      <div class="form-group form-check">
-        <label for="Entering destination">Scheduled days</label>
-        <small class="form-text text-muted">When will the carpool be active?</small>
+      <div class="form-group form-check" id="size">
+        <label for="Entering destination">Scheduled days <small class="form-text text-muted">When will the carpool be active?</small></label>
+        
         <div class="custom-control custom-checkbox">
           <input type="checkbox" class="custom-control-input" id="sunday" />
           <label class="custom-control-label" for="sunday">Sunday</label>
@@ -89,8 +89,9 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="Time to leave">Time to leave</label>
+        <label for="Time to leave">Time to Leave</label><br>
         <select id="timeToLeaveHour" class="form-control-inline">
+          
           <option selected>1</option>
           <option>2</option>
           <option>3</option>
@@ -124,7 +125,7 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="Time to arrive home">Time to arrive home</label>
+        <label for="Time to arrive home">Time to Return</label><br>
         <select id="timeToArriveHomeHour" class="form-control-inline">
           <option selected>1</option>
           <option>2</option>
@@ -159,7 +160,7 @@
         </select>
       </div>
       <div class="form-group-inline">
-        <label for="Entering type of car">Type of car</label>
+        <label for="Entering type of car">Type of Car</label>
         <input
           class="form-control"
           id="make"

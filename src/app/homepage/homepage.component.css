@@ -3,8 +3,16 @@ h1.app-title {
     margin-top: 1.25em;
 }
 
+@media screen and (max-width: 565px) {
+    h1.app-title {
+        text-align: center;
+        margin-top: 2em;
+    }
+}
+
 .jumbotron {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    height: 200px;
 }
 
 main {
@@ -17,5 +25,26 @@ p {
 }
 
 section {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
 }
+
+.ml9 {
+    position: relative;
+    font-weight: 200;
+    font-size: 4em;
+  }
+  
+  .ml9 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .ml9 .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
