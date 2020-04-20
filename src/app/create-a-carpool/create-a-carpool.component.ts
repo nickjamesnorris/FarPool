@@ -18,6 +18,8 @@ export class CreateACarpoolComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    console.log("form");
+    console.log(this.carpoolService.getAllCarpools());
   }
 
   createForm() {
@@ -36,7 +38,9 @@ export class CreateACarpoolComponent implements OnInit {
   }
 
   onSubmit() {
-    this.carpoolService.postCarpool(new Carpool({
+    console.log("submit");
+    console.log(JSON.stringify(this.carpoolForm.get('leaveTime').value));
+    let newCarpool = new Carpool({
       carpoolName: this.carpoolForm.get('carpoolName').value,
       hostName: this.carpoolForm.get('hostName').value,
       startingPoint: this.carpoolForm.get('startingPoint').value,
@@ -47,7 +51,9 @@ export class CreateACarpoolComponent implements OnInit {
       make: this.carpoolForm.get('make').value,
       model: this.carpoolForm.get('model').value,
       year: this.carpoolForm.get('year').value
-    }));
+    });
+    console.log(newCarpool);
+    this.carpoolService.postCarpool(newCarpool);
     this.router.navigate(['createcarpool']);
     this.flashMessagesService.show("Carpool submitted successfully!", { cssClass: 'alert-success', timeout: 4000 });
     this.carpoolForm.reset();

@@ -1,7 +1,7 @@
 export class Carpool {
     public carpoolName: String;
     public hostName: string;
-    public staringPoint: string;
+    public startingPoint: string;
     public destination: string;
     public scheduledDays: string[];
     public leaveTime: string;
@@ -14,7 +14,7 @@ export class Carpool {
     constructor(carpoolObj) {
         this.carpoolName = carpoolObj.carpoolName;
         this.hostName = carpoolObj.hostName;
-        this.staringPoint = carpoolObj.staringPoint;
+        this.startingPoint = carpoolObj.startingPoint;
         this.destination = carpoolObj.destination
         this.scheduledDays = carpoolObj.scheduledDays;
         this.leaveTime = carpoolObj.leaveTime;

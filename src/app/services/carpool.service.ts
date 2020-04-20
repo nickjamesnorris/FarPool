@@ -15,7 +15,7 @@ export class CarpoolService {
     this.afs.collection('carpools').add({
       carpoolName: carpool.carpoolName,
       hostName: carpool.hostName,
-      startingPoint: carpool.staringPoint,
+      startingPoint: carpool.startingPoint,
       destination: carpool.destination,
       scheduledDays: carpool.scheduledDays,
       leaveTime: carpool.leaveTime,
@@ -24,5 +24,13 @@ export class CarpoolService {
       model: carpool.model,
       year: carpool.year
     });
+  }
+
+  public getAllCarpools(): Observable<Carpool[]> {
+    return this.afs
+      .collection('carpools')
+      .valueChanges().pipe(
+        map( carpools => carpools.map( carpoolObj => new Carpool(carpoolObj) ))
+      );
   }
 }
