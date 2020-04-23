@@ -17,6 +17,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 //import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
+import { CarpoolListComponent } from './carpool-list/carpool-list.component';
 //import { AuthGuard } from './services/auth-guard.service';
 
 @NgModule({
@@ -26,7 +27,8 @@ import { environment } from 'src/environments/environment';
     MapComponent,
     AboutComponent,
     HomepageComponent,
-    CreateACarpoolComponent
+    CreateACarpoolComponent,
+    CarpoolListComponent
   ],
   imports: [
     BrowserModule,
