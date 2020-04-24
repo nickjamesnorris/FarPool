@@ -6,14 +6,11 @@
 
 <main>
   <section class="container">
-    <div *ngIf="userService.user$ | async; then authenticated else guest">
-      <!-- template will replace this div -->
-    </div>
 
     <!-- User logged in -->
-    <ng-template #authenticated>
+    <div [hidden]="hidden">
       <flash-messages></flash-messages>
-      <form [formGroup]="carpoolForm" *ngIf="userService.user$ | async" (ngSubmit)="onSubmit()">
+      <form [formGroup]="carpoolForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label>Carpool name</label>
           <input
@@ -35,6 +32,7 @@
             name="startingPoint"
             formControlName="startingPoint"
             aria-describedby="starting point"
+            placeholder="Enter the starting point..."
           />
         </div>
         <div class="form-group">
@@ -46,6 +44,7 @@
             name="destination"
             formControlName="destination"
             aria-describedby="destination"
+            placeholder="Enter the destination..."
           />
         </div>
   
@@ -184,15 +183,15 @@
         </div>
         <button type="submit" class="btn btn-primary" id="button">Submit</button>
       </form>
-    </ng-template>
+    </div>
 
     <!-- User NOT logged in -->
-    <ng-template #guest>
+    <div [hidden]="!hidden">
       <h3>Please login to create a carpool</h3>
   
       <button (click)="userService.googleSignin()">
         <i class="fa fa-google"></i> Log in with Google
       </button>
-    </ng-template>
+    </div>
   </section>
 </main>

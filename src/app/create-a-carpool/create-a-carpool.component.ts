@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, OnDestroy, Input, ElementRef, ChangeDetectorRef } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router } from '@angular/router';
@@ -9,6 +9,8 @@ import { Carpool } from '../models/carpool';
 import { Subscription } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { MapsAPILoader } from '@agm/core';
+import {} from 'googlemaps';
 
 @Component({
   selector: 'app-create-a-carpool',
@@ -17,16 +19,29 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class CreateACarpoolComponent implements OnInit, OnDestroy {
   public carpoolForm: FormGroup;
+  public hidden: boolean = true;
+
+  // @ViewChild('startingPoint')
+  // public startingPointRef: ElementRef;
 
   // /** Keeps the subscription to the user object */
   // private userSubscription: Subscription;
 
-  constructor(private fb: FormBuilder, private flashMessagesService: FlashMessagesService, private router: Router, private carpoolService: CarpoolService, public userService: UserService, private afAuth: AngularFireAuth, private afs: AngularFirestore,) {
+  constructor(private fb: FormBuilder, private flashMessagesService: FlashMessagesService, private router: Router, private carpoolService: CarpoolService, public userService: UserService, private afAuth: AngularFireAuth, private afs: AngularFirestore, private mapsAPILoader: MapsAPILoader, private cdRef: ChangeDetectorRef) {
     this.createForm();
    }
 
   ngOnInit(): void {
-    
+    this.userService.user$.subscribe((user) => {
+      this.hidden = false; //Show the form
+      let startingPoint = document.getElementById('startingPoint') as HTMLInputElement;
+      let destination = document.getElementById('destination') as HTMLInputElement;
+
+      this.mapsAPILoader.load().then(() => {
+        let startingPointAutocomplete = new google.maps.places.Autocomplete(startingPoint);
+        let destinationAutocomplete = new google.maps.places.Autocomplete(destination);
+      })
+    });
   }
 
   ngOnDestroy() {
