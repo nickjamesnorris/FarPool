@@ -1,6 +1,8 @@
+import { User } from './user';
+
 export class Carpool {
     public carpoolName: String;
-    public hostName: string;
+    public host: User;
     public startingPoint: string;
     public destination: string;
     public scheduledDays: string[];
@@ -13,7 +15,7 @@ export class Carpool {
 
     constructor(carpoolObj) {
         this.carpoolName = carpoolObj.carpoolName;
-        this.hostName = carpoolObj.hostName;
+        this.host = carpoolObj.host;
         this.startingPoint = carpoolObj.startingPoint;
         this.destination = carpoolObj.destination
         this.scheduledDays = carpoolObj.scheduledDays;

@@ -14,7 +14,7 @@ export class CarpoolService {
   public postCarpool(carpool: Carpool): void {
     this.afs.collection('carpools').add({
       carpoolName: carpool.carpoolName,
-      hostName: carpool.hostName,
+      host: carpool.host,
       startingPoint: carpool.startingPoint,
       destination: carpool.destination,
       scheduledDays: carpool.scheduledDays,
