@@ -1,29 +1,29 @@
 <div class="container" id="carpool-container">
-    <div class="row" *ngIf="carpoolList | async; else no_carpools">
-      <ng-container *ngFor="let carpool of carpoolList | async">
-        <div class="card-columns">
-            <div class="card text-white bg-primary" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">{{carpool.carpoolName}}</h5>
-                  <p class="card-text"><small>Hosted by {{carpool.host.displayName}}</small></p>
-                  <p class="card-text"><em>Starting Point: </em> {{carpool.startingPoint}}</p>
-                  <p class="card-text"><em>Destination: </em> {{carpool.destination}}</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><em>Scheduled Days: </em> {{carpool.scheduledDays}}</li>
-                  <li class="list-group-item"><em>Time to Leave: </em> {{carpool.timeToLeave}}</li>
-                  <li class="list-group-item"><em>Time to Return: </em> {{carpool.timeToReturn}}</li>
-                  <li class="list-group-item">{{carpool.year}} {{carpool.make}} {{carpool.model}}</li>
-                </ul>
-              </div>
-        </div>
-      </ng-container>
-    </div>
-    <ng-template #no_carpools>
-      <div class="row">
-        <div class="col">
-          <p>No carpools yet, please add one!</p>
+  <div class="row" *ngIf="carpoolList | async; else no_carpools">
+    <ng-container *ngFor="let carpool of carpoolList | async">
+      <div class="card-group">
+        <div class="card text-white bg-primary" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{carpool.carpoolName}}</h5>
+            <p class="card-text"><small>Hosted by {{carpool.host.displayName}}</small></p>
+            <p class="card-text"><em>Starting Point: </em> {{carpool.startingPoint}}</p>
+            <p class="card-text"><em>Destination: </em> {{carpool.destination}}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><em>Scheduled Days: </em> {{carpool.scheduledDays}}</li>
+            <li class="list-group-item"><em>Time to Leave: </em> {{carpool.timeToLeave}}</li>
+            <li class="list-group-item"><em>Time to Return: </em> {{carpool.timeToReturn}}</li>
+            <li class="list-group-item">{{carpool.year}} {{carpool.make}} {{carpool.model}}</li>
+          </ul>
         </div>
       </div>
-    </ng-template>
+    </ng-container>
   </div>
+  <ng-template #no_carpools>
+    <div class="row">
+      <div class="col">
+        <p>No carpools yet, please add one!</p>
+      </div>
+    </div>
+  </ng-template>
+</div>

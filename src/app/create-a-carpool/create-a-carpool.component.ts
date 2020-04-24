@@ -17,7 +17,7 @@ import {} from 'googlemaps';
   templateUrl: './create-a-carpool.component.html',
   styleUrls: ['./create-a-carpool.component.css']
 })
-export class CreateACarpoolComponent implements OnInit, OnDestroy {
+export class CreateACarpoolComponent implements OnInit {
   public carpoolForm: FormGroup;
   public hidden: boolean = true;
 
@@ -40,13 +40,17 @@ export class CreateACarpoolComponent implements OnInit, OnDestroy {
       this.mapsAPILoader.load().then(() => {
         let startingPointAutocomplete = new google.maps.places.Autocomplete(startingPoint);
         let destinationAutocomplete = new google.maps.places.Autocomplete(destination);
-      })
-    });
-  }
 
-  ngOnDestroy() {
-    // Clean up the subscription if this template is destroyed
-    //this.userSubscription.unsubscribe();
+        startingPointAutocomplete.addListener("place_changed", () => {
+          let place = startingPointAutocomplete.getPlace();
+          this.carpoolForm.get('startingPoint').setValue(place.formatted_address);
+        });
+        destinationAutocomplete.addListener("place_changed", () => {
+          let place = destinationAutocomplete.getPlace();
+          this.carpoolForm.get('destination').setValue(place.formatted_address);
+        });
+      });
+    });
   }
 
   createForm() {
@@ -65,8 +69,9 @@ export class CreateACarpoolComponent implements OnInit, OnDestroy {
   }
 
   async onSubmit() {
+    console.log(this.carpoolForm.get('destination').value);
+    
     let currentUser = await this.userService.getCurrentUser();
-    console.log(currentUser);
     let newCarpool = new Carpool({
       carpoolName: this.carpoolForm.get('carpoolName').value,
       host: currentUser,
