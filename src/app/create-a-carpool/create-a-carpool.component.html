@@ -10,6 +10,7 @@
     <!-- User logged in -->
     <div [hidden]="hidden">
       <flash-messages></flash-messages>
+      <button class="btn btn-danger" (click)="userService.signOut()">Log Out</button>
       <form [formGroup]="carpoolForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label>Carpool name</label>
@@ -20,7 +21,7 @@
             name="carpoolName"
             formControlName="carpoolName"
             aria-describedby="carpool name"
-            placeholder="Enter the name of the carpool..."
+            placeholder="Ex: ''My Cool Carpool''"
           />
         </div>
   
@@ -33,7 +34,7 @@
             name="startingPoint"
             formControlName="startingPoint"
             aria-describedby="starting point"
-            placeholder="Enter the starting point..."
+            placeholder="Ex: ''My house''"
           />
         </div>
         <div class="form-group">
@@ -45,7 +46,7 @@
             name="destination"
             formControlName="destination"
             aria-describedby="destination"
-            placeholder="Enter the destination..."
+            placeholder="Ex: ''My workplace''"
           />
         </div>
   
@@ -59,6 +60,7 @@
             name="scheduledDays"
             formControlName="scheduledDays"
             aria-describedby="carpool date"
+            placeholder="Ex: ''Monday, Wednesday, Friday''"
           />
           
         </div>
@@ -71,6 +73,7 @@
             name="leaveTime"
             formControlName="leaveTime"
             aria-describedby="time carpool is leaving"
+            placeholder="Ex: ''10:00 AM''"
           />
         </div>
         <div class="form-group">
@@ -82,6 +85,7 @@
           name="returnTime"
           formControlName="returnTime"
           aria-describedby="time carpool is returning"
+          placeholder="Ex: ''5:00 PM''"
         />
         </div>
         <div class="form-group-inline">
