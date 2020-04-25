@@ -34,7 +34,6 @@ export class CreateACarpoolComponent implements OnInit {
   ngOnInit(): void {
     this.userService.user$.subscribe((user) => {
       if (user != null) {
-        console.log(user);
         this.hidden = false; //Show the form
         let startingPoint = document.getElementById('startingPoint') as HTMLInputElement;
         let destination = document.getElementById('destination') as HTMLInputElement;
