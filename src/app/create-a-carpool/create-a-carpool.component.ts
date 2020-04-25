@@ -95,8 +95,6 @@ export class CreateACarpoolComponent implements OnInit {
   }
 
   async onSubmit() {
-    console.log(this.carpoolForm.get("destination").value);
-
     let currentUser = await this.userService.getCurrentUser();
     let newCarpool = new Carpool({
       carpoolName: this.carpoolForm.get("carpoolName").value,
