@@ -19,7 +19,7 @@ export class UserService {
   constructor(
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
-    private router: Router
+    private router: Router,
   ) {
       // Get the auth state, then fetch the Firestore user document or return null
       this.user$ = this.afAuth.authState.pipe(
@@ -46,9 +46,9 @@ export class UserService {
 
   /** Authenticates the user with Google */
   async googleSignin() {
-    const provider = new auth.GoogleAuthProvider();
-    const credential = await this.afAuth.signInWithPopup(provider);
-    return this.updateUserData(credential.user);
+      const provider = new auth.GoogleAuthProvider();
+      const credential = await this.afAuth.signInWithPopup(provider);
+      return this.updateUserData(credential.user);
   }
 
   /** Signs the user out of Google */

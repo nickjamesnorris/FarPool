@@ -3,14 +3,14 @@ import { User } from './user';
 export class Carpool {
     public carpoolName: String;
     public host: User;
-    public startingPoint: string;
-    public destination: string;
-    public scheduledDays: string[];
-    public leaveTime: string;
-    public returnTime: string;
-    public make: string;
-    public model: string;
-    public year: number;
+    public startingPoint: String;
+    public destination: String;
+    public scheduledDays: String;
+    public leaveTime: String;
+    public returnTime: String;
+    public make: String;
+    public model: String;
+    public year: String;
 
 
     constructor(carpoolObj) {
